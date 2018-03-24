@@ -4,7 +4,7 @@ class SearchBar extends Component {
     constructor(props) { //for each new instance
         super(props) //call constructor of parrent class
 
-        this.state = { term: 'Starting Value'} //init state
+        this.state = { term: ''} //init state
     }
 
     // render() {
