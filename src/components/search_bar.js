@@ -1,6 +1,12 @@
 import React, { Component } from 'react' // const Component = React.Component
 
 class SearchBar extends Component {
+    constructor(props) { //for each new instance
+        super(props) //call constructor of parrent class
+
+        this.state = { term: 'Starting Value'} //init state
+    }
+
     // render() {
     //     return <input onChange={this.onInputChange} />
     // }
@@ -10,7 +16,14 @@ class SearchBar extends Component {
     // }
 
     render() {
-        return <input onChange={(event) => console.log(event.target.value)} />
+        // ONLY setState !!! setState() -> render() 
+        return (
+            <div>
+                <input
+                    value={this.state.term} 
+                    onChange={event => this.setState({ term: event.target.value})} /> 
+            </div>
+        )
     }
 }
 
